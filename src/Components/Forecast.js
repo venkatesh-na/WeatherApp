@@ -2,7 +2,6 @@ import React from "react"
 import { useGlobalContext } from "./Context";
 import Message from "./Message";
 const Forecast = ()=>{
-    console.log("forecast render")
     const {loading,data,error,heading,weathercolor} = useGlobalContext()
     if(loading)
     {
@@ -23,7 +22,7 @@ const Forecast = ()=>{
         const {main:important,sys,visibility,weather,wind:{speed}} = data
         const {feels_like,humidity,pressure,temp,temp_max,temp_min} = important
         const {sunrise,sunset} = sys
-        const [{description,icon,main}] = weather
+        const [{description,icon}] = weather
         //kelvin-273.15 = oC
         //new Date(unix*1000).getHour() and getMinutes()
         //m/s - miles/sec - 1m/s  = 2.237 miles

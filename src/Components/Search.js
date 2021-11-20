@@ -1,7 +1,6 @@
 import { useGlobalContext } from "./Context"
 const Search = ()=>{
     const {handleSubmit,handleInput,input} = useGlobalContext()
-    console.log("serach render")
     return (
         <section className = "form-container">
             <form action = "#" onSubmit = {handleSubmit}>
